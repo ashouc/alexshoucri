@@ -1,4 +1,4 @@
-/*PAGE SETUP*/
+/*******PAGE SETUP*******/
 * {
 	box-sizing: border-box;
 	font-family: 'Dosis', sans-serif;
@@ -15,6 +15,7 @@ html, body {
 	width: 100%;
 	height: 100%;
 	position: relative;
+	text-align: center;
 }
 .gradient, .gradient p {
 	background-image: -webkit-linear-gradient(left, #CA0E8D,#BE138E,#EB008C,#91268F,
@@ -23,12 +24,12 @@ html, body {
 	color: transparent;
 }
 
-.bio-box .name, .icon-box, .short-bio{
+.bio-box .name, .short-bio, .contact, .box{
 	opacity: 0;
-	transition: all 2s 0s cubic-bezier(0.22, 0.61, 0.36, 1);
+	transition: all 1s 0s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
-/*INTRO*/
+/*******INTRO*******/
 .alexandra {
 	padding: 75px 0 20px;
 	margin-left: 5%;
@@ -49,13 +50,13 @@ h1.name span {
 	font-weight: 200;
 }
 
-/*A LITTLE ABOUT ME*/
-div.short-bio {
+/*******A LITTLE ABOUT ME*******/
+div.short-bio, div.contact {
 	opacity: 0;
-	padding: 50px;
+	padding: 20px;
 	height: 60%;
 }
-.short-bio p {
+.short-bio p, .contact p {
 	display: block;
 	padding: 20px 10px 0;
 	font-size: 18px;
@@ -67,13 +68,14 @@ div.short-bio {
 	padding: 0 0 150px;
 }
 
-/*SOCIAL MEDIA*/
+/*******SOCIAL MEDIA*******/
 .icon-box {
 	display: block;
 	width: 100%;
 	text-align: center;
 	font-size: 32px;
 	margin-bottom: 50px;
+	padding-top: 10px;
 	padding: 0 25% 0;
 }
 i.icon.fa {	
@@ -93,7 +95,7 @@ a {
 	text-decoration: none;
 	color: #93278F;
 }
-.up-left .box {
+.up-left .box-name {
 	display: inline-block;
 	height: 200px;
 	width: 200px;
@@ -103,7 +105,7 @@ a {
 	z-index: 100;
 }
 
-/*FOOTER*/
+/*******FOOTER*******/
 footer {
 	font-weight: 300;
 	position: absolute;
@@ -129,24 +131,134 @@ footer {
     margin-left: 1%;
 }
 
-/*AZIZ, LIGHT!!*/
-span.rotate i {
-	margin-left: 25px;
-	margin-right: 25px;
-	height: 32px;
-	width: 32px;
-	transform: rotate(100deg);
-	transition: 0.25s 0s all ease-in;
+/*******AZIZ, LIGHT!!*******/
+.box {
+	width: 100px;
+	display: inline-block;
+	position: relative;
+    margin: 0 25% 0;
+    opacity: 0;
 }
-span.rotate i:hover {
-	/*margin: -10px;*/
-	transform: rotate(970deg);
+.outside {
+	display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    padding: 20px;
+    border-left: 1px solid #CA0E8D;
+    border-right: 1px solid #93278F;
+    border-top: 1px solid #CA0E8D;
+    border-bottom: 1px solid #93278F;
+    background-image: 
+	    linear-gradient(#CA0E8D, #93278F), 
+	    linear-gradient(#CA0E8D, #93278F), 
+	    linear-gradient(#CA0E8D, #93278F), 
+	    linear-gradient(#CA0E8D, #93278F)
+    ;
+    background-size: 0px 100%;
+    background-repeat: no-repeat;   
+}
+.outside:nth-child(1) {
+	-webkit-border-radius: 40px 3px 0 3px;
+}
+.outside:nth-child(2) {
+	-webkit-border-radius: 3px 40px 3px 0;
+}
+.outside:nth-child(3) {
+	-webkit-border-radius: 3px 0 3px 40px;
+}
+.outside:nth-child(4) {
+	-webkit-border-radius: 0 3px 40px 3px;;
+}
+.shadow.outside:nth-child(1) {
+	box-shadow: -3px -3px 4px rgba(157, 138, 159, 0.2);
+}
+.shadow.outside:nth-child(2) {
+	box-shadow: 3px -3px 4px rgba(157, 138, 159, 0.2);
+}
+.shadow.outside:nth-child(3) {
+	box-shadow: -3px 3px 4px rgba(157, 138, 159, 0.2);
+}
+.shadow.outside:nth-child(4) {
+	box-shadow: 3px 3px 4px rgba(157, 138, 159, 0.2);
+}
+.outside:nth-child(1):hover, .outside:nth-child(2):hover, .outside:nth-child(3):hover, .outside:nth-child(4):hover{
 	cursor: pointer;
 }
-.fa-superpowers {
-
-	color: #CA0E8D;
+.inside {
+	position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: 
+	    linear-gradient(#CA0E8D, #93278F), 
+	    linear-gradient(#CA0E8D, #93278F), 
+	    linear-gradient(#CA0E8D, #93278F), 
+	    linear-gradient(#CA0E8D, #93278F)
+    ;
+    background-size: 0px 100%;
+    background-repeat: no-repeat;
 }
+.outside:nth-child(1) .inside{
+    bottom: -1px;
+    right: -1px;
+    border-left: 1px solid #CA0E8D;
+    border-right: 1px solid #FFFFFF;
+    border-top: 1px solid #93278F;
+    border-bottom: 1px solid #FFFFFF;
+    -webkit-border-radius: 20px 0 0 0;
+}
+.outside:nth-child(2) .inside{
+    bottom: -1px;
+    left: -1px;
+    border-left: 1px solid #FFFFFF;
+    border-right: 1px solid #CA0E8D;
+    border-top: 1px solid #93278F;
+    border-bottom: 1px solid #FFFFFF;
+    -webkit-border-radius: 0 20px 0 0;
+}
+.outside:nth-child(3) .inside{
+    top: -1px;
+    right: -1px;
+    border-right: 1px solid #FFFFFF;
+    border-left: 1px solid #CA0E8D;
+    border-bottom: 1px solid #93278F;
+    border-top: 1px solid #FFFFFF;
+    -webkit-border-radius: 0 0 0 20px;
+}
+.outside:nth-child(4) .inside{
+    top: -1px;
+    left: -1px;
+    border-right: 1px solid #CA0E8D;
+    border-left: 1px solid #FFFFFF;
+    border-bottom: 1px solid #93278F;
+    border-top: 1px solid #FFFFFF;
+    -webkit-border-radius: 0 0 20px 0;
+}
+/*CENTER CIRCUIT*/
+.circle {
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 24px;
+    top: 0;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+}
+div.rotate i {
+    height: 40px;
+    width: 40px;
+    font-size: 27px;
+    line-height: 40px;
+    display: inline-block;
+    transition: 0.25s 0s all ease-in-out;
+}
+div.rotate i:hover {
+	cursor: pointer;
+}
+div.rotate.turn i {
+    transform: rotate(720deg);
+}
+
 div.close {
 	display: block;
 	text-align: center;
@@ -249,23 +361,32 @@ div.close {
 	.col-sm-11 { width: 91.66%; } 
 	.col-sm-12 { width: 100%; }
 
-	span.rotate i:hover {
-		transform: none; 
-	}
 	h1.name span {
 		display: block;
 	}
 	h1.name span:nth-child(1) {
 		font-size: 24px;	
 	}
+	h1.name span:nth-child(2) {
+		display: none;	
+	}
 	h1.name span:nth-child(3) {
 		font-size: 18px;	
+	}
+	div.bio-box {
+		padding: 0 0 50px;
 	}
 	div.short-bio {
 		padding: 0;
 	}
 	div.short-bio.gradient > p:nth-child(3) {
 		margin-bottom: 50px;
+	}
+	div.icon-box {
+		padding: 0;
+	}
+	i.icon.fa {
+		padding: 10px 0 0 0 ;
 	}
 	footer{
 		position: relative;
@@ -291,23 +412,32 @@ div.close {
 	.col-xs-11 { width: 91.66%; } 
 	.col-xs-12 { width: 100%; }
 
-	span.rotate i:hover {
-		transform: none; 
-	}
 	h1.name span {
 		display: block;
 	}
 	h1.name span:nth-child(1) {
 		font-size: 24px;	
 	}
+	h1.name span:nth-child(2) {
+		display: none;	
+	}
 	h1.name span:nth-child(3) {
 		font-size: 18px;	
+	}
+	div.bio-box {
+		padding: 0 0 50px;
 	}
 	div.short-bio {
 		padding: 0;
 	}
 	div.short-bio.gradient > p:nth-child(3) {
 		margin-bottom: 50px;
+	}
+	div.icon-box {
+		padding: 0;
+	}
+	i.icon.fa {
+		padding: 10px 0 0 0 ;
 	}
 	footer{
 		position: relative;
