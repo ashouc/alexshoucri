@@ -58,14 +58,14 @@ div.short-bio, div.contact {
 }
 .short-bio p, .contact p {
 	display: block;
-	padding: 20px 10px 0;
+	padding: 15px 10px 0;
 	font-size: 18px;
 	letter-spacing: 2px;
 }
 .bio-box {
 	display: block;
 	text-align: center;
-	padding: 0 0 150px;
+	padding: 0 0 50px;
 }
 
 /*******SOCIAL MEDIA*******/
@@ -108,15 +108,13 @@ a {
 /*******FOOTER*******/
 footer {
 	font-weight: 300;
-	position: absolute;
-	bottom: 0;
-	left: 0;
+	position: relative;
 	letter-spacing: 5px;
 	width: 100%;
-	padding-top: 20px;
-    padding-bottom: 20px;
+
 }
 .footer-inner {
+	padding-bottom: 10px;
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
