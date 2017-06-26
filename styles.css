@@ -1,7 +1,7 @@
 /*******PAGE SETUP*******/
 * {
 	box-sizing: border-box;
-	font-family: 'Dosis', sans-serif;
+	font-family: 'Josefin Sans', sans-serif;
 	margin: 0;
 	padding: 0;
 }
@@ -31,12 +31,12 @@ html, body {
 
 /*******INTRO*******/
 .alexandra {
-	padding: 75px 0 20px;
+	padding: 30px 0 20px;
 	margin-left: 5%;
 	margin-right: 5%;
 }
 h1.name {
-
+	padding-bottom: 20px;
 	opacity: 0;
 }
 h1.name span {
@@ -53,30 +53,31 @@ h1.name span {
 /*******A LITTLE ABOUT ME*******/
 div.short-bio, div.contact {
 	opacity: 0;
-	padding: 20px;
+	padding: 0 130px 20px;
 	height: 60%;
+	display: inline-block;
+	width: 100%;
 }
 .short-bio p, .contact p {
 	display: block;
-	padding: 15px 10px 0;
+	padding: 15px 15px 0;
 	font-size: 18px;
 	letter-spacing: 2px;
+	line-height: 200%;
+	text-align: left;
 }
 .bio-box {
 	display: block;
 	text-align: center;
-	padding: 0 0 50px;
+	padding: 0 0 2%;
 }
 
 /*******SOCIAL MEDIA*******/
 .icon-box {
-	display: block;
-	width: 100%;
+	display: inline-block;
+	width: 33.33%;
 	text-align: center;
 	font-size: 32px;
-	margin-bottom: 50px;
-	padding-top: 10px;
-	padding: 0 25% 0;
 }
 i.icon.fa {	
 
@@ -85,7 +86,7 @@ i.icon.fa {
 div > a > i {
 	color: #93278F;
 	display: inline-block;
-	margin-bottom: 50px;
+	margin-bottom: 25px;
 }
 div > a > i:hover {
 	cursor: pointer;
@@ -107,9 +108,8 @@ a {
 
 /*******FOOTER*******/
 footer {
-	font-weight: 300;
-	position: relative;
-	letter-spacing: 5px;
+	position: absolute;
+	letter-spacing: 3px;
 	width: 100%;
 
 }
@@ -118,11 +118,8 @@ footer {
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
-    float: none;
-    clear: both;
-    font-size: 11px;
+    font-size: 9px;
     text-align: center;
-    vertical-align: middle;
 }
 .footer-row {
     margin-right: 1%;
@@ -130,6 +127,10 @@ footer {
 }
 
 /*******AZIZ, LIGHT!!*******/
+.outer-box {
+	display: inline-block;
+	width: 100%;
+}
 .box {
 	width: 100px;
 	display: inline-block;
@@ -283,10 +284,6 @@ div.close {
 	.col-xl-11 { width: 91.66%; } 
 	.col-xl-12 { width: 100%; }
 
-	div.short-bio.gradient > p:nth-child(3) {
-		margin-bottom: 120px;
-	}
-
 }
 /*******For Devices with width between 1024px-1199px*******/
 @media (min-width: 1024px) and (max-width: 1199px){
@@ -306,10 +303,6 @@ div.close {
 	.col-lg-10 { width: 83.33%; }
 	.col-lg-11 { width: 91.66%; } 
 	.col-lg-12 { width: 100%; }
-
-	div.short-bio.gradient > p:nth-child(3) {
-		margin-bottom: 120px;
-	}
 }
 
 /*******For Devices with width between 768px-1023px*******/
@@ -333,10 +326,6 @@ div.close {
 
 	div.short-bio {
 		padding: 10px;
-	}
-	
-	div.short-bio.gradient > p:nth-child(3) {
-		margin-bottom: 120px;
 	}
 }
 
@@ -374,14 +363,12 @@ div.close {
 	div.bio-box {
 		padding: 0 0 50px;
 	}
-	div.short-bio {
-		padding: 0;
-	}
-	div.short-bio.gradient > p:nth-child(3) {
-		margin-bottom: 50px;
+	div.short-bio, div.contact {
+		padding: 20px;
 	}
 	div.icon-box {
 		padding: 0;
+		width: 100%;
 	}
 	i.icon.fa {
 		padding: 10px 0 0 0 ;
@@ -425,14 +412,12 @@ div.close {
 	div.bio-box {
 		padding: 0 0 50px;
 	}
-	div.short-bio {
-		padding: 0;
-	}
-	div.short-bio.gradient > p:nth-child(3) {
-		margin-bottom: 50px;
+	div.short-bio, div.contact {
+		padding: 20px;
 	}
 	div.icon-box {
 		padding: 0;
+		width: 100%;
 	}
 	i.icon.fa {
 		padding: 10px 0 0 0 ;

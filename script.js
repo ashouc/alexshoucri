@@ -17,12 +17,12 @@ function start(){
 function postInfo() {
 	setTimeout(function(){
 		$('.bio-box .name').css('opacity','1');
-		$('.short-bio').css('opacity','1');
-		$('.contact').css('opacity','1');
 	}, 3000);
 	setTimeout(function(){
+		$('.short-bio').css('opacity','1');
+		$('.contact').css('opacity','1');
 		$('.box').css('opacity','1');
-	}, 4000);
+	}, 5000);
 }
 
 
