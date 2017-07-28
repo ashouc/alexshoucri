@@ -16,6 +16,7 @@ function start(){
 
 function postInfo() {
 	setTimeout(function(){
+		$('.bio-box').css('visibility','visible')
 		$('.bio-box .name').css('opacity','1');
 	}, 3000);
 	setTimeout(function(){
