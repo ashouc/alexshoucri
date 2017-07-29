@@ -10,11 +10,22 @@ function start(){
 	setupPanel('div.shadow.outside:nth-child(4)');
 	setupRotation('.outside');
 	setupRotation('.circle');
-	rotate();	
+	rotate();
+	footerFix();
 }
 
+function footerFix(){
+	$(window).resize(function() {
+		if ($(window).height() < 725) {
+			$('footer').css('display','none');
+		} else {
+			$('footer').css('display','block');
+		}
+	})	
+}
 
 function postInfo() {
+	
 	setTimeout(function(){
 		$('.bio-box').css('visibility','visible')
 		$('.bio-box .name').css('opacity','1');
